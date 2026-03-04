@@ -128,13 +128,7 @@ extra_css:
 
 # Configuración extra
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/
-      name: GitHub
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/
-      name: LinkedIn
+
   version:
     provider: mike
     default: latest

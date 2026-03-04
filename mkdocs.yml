@@ -1,0 +1,230 @@
+# Información del Proyecto
+site_name: Cloud Computing & Big Data
+site_url: https://example.com
+site_author: Universidad Internacional de Valencia
+site_description: >-
+  Curso completo de Cloud & Big Data: 
+  Del dato oficial al conocimiento accionable mediante arquitecturas cloud, 
+  análisis multidimensional y minería de datos inteligente.
+
+# Repositorio
+# repo_name: username/repo
+# repo_url: https://github.com/username/repo
+
+# Derechos de Autor
+copyright: Copyright &copy; 2026 Universidad Internacional de Valencia
+
+# Configuración
+theme:
+  name: material
+  language: es
+  
+  # Esquema de colores (similar a referencia de mkdocs-material)
+  palette:
+    # Modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep-orange
+      accent: deep-orange
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    
+    # Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep-orange
+      accent: deep-orange
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  
+  # Configuración de fuentes
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  # Características
+  features:
+    # Navegación
+    - navigation.instant        # Carga instantánea
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking       # Seguimiento de anclas
+    # - navigation.tabs           # Pestañas de navegación (DESACTIVADO - ahora en barra lateral)
+    # - navigation.tabs.sticky    # Pestañas de navegación fijas (DESACTIVADO)
+    - navigation.sections       # Secciones de navegación
+    - navigation.expand         # Expandir navegación por defecto
+    - navigation.path           # Mostrar ruta de navegación
+    - navigation.indexes        # Páginas índice de sección
+    - navigation.top            # Botón volver arriba
+    - navigation.footer         # Navegación en pie de página
+    
+    # Búsqueda
+    - search.suggest            # Sugerencias de búsqueda
+    - search.highlight          # Resaltar términos de búsqueda
+    - search.share              # Compartir enlace de búsqueda
+    
+    # Cabecera (cabecera fija, sin autohide)
+    # - header.autohide          # Auto-ocultar cabecera (DESACTIVADO para cabecera fija)
+    
+    # Tabla de contenidos
+    - toc.follow               # Seguir elemento activo en TOC
+    # - toc.integrate            # Integrar TOC en navegación (DESACTIVADO)
+    
+    # Contenido
+    - content.code.copy        # Botón copiar para bloques de código
+    - content.code.select      # Seleccionar bloques de código
+    - content.code.annotate    # Anotaciones de código
+    - content.tabs.link        # Enlazar pestañas de contenido
+    - content.tooltips         # Información sobre herramientas
+    - content.footnote.tooltips # Información sobre notas al pie
+  
+  # Logo y favicon
+  icon:
+    logo: material/cloud
+    repo: fontawesome/brands/github
+  
+  # Página de inicio personalizada
+  # custom_dir: overrides
+
+# Complementos
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: 
+        - es
+        - en
+  - glightbox:  # Visor de imágenes
+
+# Extensiones
+markdown_extensions:
+  # Markdown de Python
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Enlace a esta sección
+      toc_depth: 4
+  
+  # Extensiones de Python Markdown
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+      auto_title: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# JavaScript adicional
+extra_javascript:
+  # Configuración de MathJax para LaTeX
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# CSS adicional
+extra_css:
+  - stylesheets/extra.css
+
+# Configuración adicional
+extra:
+  # Enlaces sociales
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/
+      name: LinkedIn
+  
+  # Selector de versión
+  version:
+    provider: mike
+    default: latest
+  
+  # Analíticas (opcional)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  
+  # Consentimiento de cookies (opcional)
+  # consent:
+  #   title: Consentimiento de cookies
+  #   description: >-
+  #     Utilizamos cookies para reconocer tus visitas repetidas y preferencias.
+
+# Árbol de páginas / Navegación
+nav:
+  - Inicio: index.md
+  
+  - Bloque 1 - Fundamentos del Dato:
+    - Economía y Gobierno del Dato: capitulo1/economia-gobierno-dato.md
+    - Fuentes Oficiales y Médicas de Datos: capitulo2/fuentes-datos.md
+  
+  - Bloque 2 - Cloud Computing:
+    - Fundamentos de Cloud Computing: capitulo3/fundamentos-cloud.md
+    - Proveedores Cloud (AWS, Azure, GCP): capitulo4/proveedores-cloud.md
+    - Metodologías DevOps y DataOps: capitulo5/metodologias-devops-dataops.md
+  
+  - Bloque 3 - Data Lakes y Almacenamiento:
+    - Arquitectura de Data Lake: capitulo6/arquitectura-data-lake.md
+    - Almacenamiento Distribuido: capitulo7/almacenamiento-distribuido.md
+  
+  - Bloque 4 - Big Data y Minería de Datos:
+    - Fundamentos de Big Data: capitulo8/fundamentos-big-data.md
+    - Minería de Datos y CRISP-DM: capitulo8/mineria-datos-metodologias.md
+  
+  - Bloque 5 - OLTP vs OLAP:
+    - Sistemas Transaccionales y Analíticos: capitulo11/oltp-vs-olap.md
+  
+  - Bloque 6 - Infraestructura Big Data:
+    - Hadoop, Spark, Kafka y Airflow: capitulo10/infraestructura-big-data.md
+  
+  - Bloque 7 - Metodologías Avanzadas de Data Science:
+    - KDD, ASUM-DM, TDSP y Más: capitulo9/metodologias-avanzadas.md
+  
+  - Bloque 8 - Gobierno de Datos:
+    - Calidad y Trazabilidad: capitulo12/calidad-trazabilidad.md
+    - Protección de Datos (RGPD): capitulo12/proteccion-datos.md
+    - Anonimización y Privacidad: capitulo12/anonimizacion.md
+  
+  - Proyecto Final:
+    - Caso Práctico Integrador: capitulo13/proyecto-final.md
+
+# Validación
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn

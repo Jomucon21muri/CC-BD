@@ -697,11 +697,13 @@ mindmap
 !!! question "¿Necesitas Ayuda?"
     
     **Durante el Curso:**
+
     - Consulta la sección **FAQ** al final de cada capítulo
     - Revisa **ejemplos prácticos** y **casos de uso**
     - Explora **referencias** a documentación oficial
     
     **Recursos Externos:**
+    
     - [AWS Documentation](https://docs.aws.amazon.com/)
     - [Azure Documentation](https://docs.microsoft.com/azure/)
     - [Google Cloud Documentation](https://cloud.google.com/docs)

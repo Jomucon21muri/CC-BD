@@ -2141,7 +2141,6 @@ Además, proveedores invierten en energías renovables:
 
 
 La construcción y operación de clouds enfrenta múltiples desafíos técnicos y organizacionales:
-
 ```text
 ┌───────────────────────────────────────────────────────┐
 │           RETOS PRINCIPALES EN CLOUD                  │
@@ -2164,7 +2163,7 @@ La construcción y operación de clouds enfrenta múltiples desafíos técnicos 
 │            └──────────────────┘                       │
 └───────────────────────────────────────────────────────┘
 ```
----
+
 **Reto 1: Calidad de Servicio (QoS):**
 
 **Problema:** La ausencia de QoS puede generar que las organizaciones declinen del uso del cloud.
@@ -2301,7 +2300,7 @@ cloudtrail.create_trail(
 
 **Framework de Seguridad:**
 
-```text
+```
 CIS (Center for Internet Security) Benchmarks para Cloud:
 1. Identity and Access Management
 2. Logging and Monitoring
@@ -2312,7 +2311,7 @@ CIS (Center for Internet Security) Benchmarks para Cloud:
 
 Cada benchmark con 100+ controles específicos
 ```
----
+
 **Reto 3: Virtualización:**
 
 **Problema:** Los accesos simultáneos de múltiples clientes a los servicios del cloud demandan más protección y control.
@@ -2412,7 +2411,7 @@ blob_client.upload_blob(data)
 - **OpenAPI** (Swagger) para documentación
 
 Pero adopción limitada, proveedores prefieren APIs propietarias (lock-in).
----
+
 **Reto 5: Contabilidad y Control de Costes:**
 
 **Problema:** Se requiere control de costos para no desbordar a las organizaciones con incrementos de pagos.
@@ -2502,7 +2501,7 @@ budgets.create_budget(
 
 # Ahora recibirás email cuando gastes >$8,000 (80% de $10K)
 ```
----
+
 **Reto 6: Estandarización:**
 
 **Problema:** El manejo de estándares para el despliegue de nubes aún no está del todo establecido.
